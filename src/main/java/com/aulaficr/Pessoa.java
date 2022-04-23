@@ -1,28 +1,13 @@
 package com.aulaficr;
 
 public class Pessoa {
-    String tipo;
-    String nome;
-    String sexo;
-    String email;
-    String cpfCnpj;
-    String tipoDoc;
-    public Pessoa(String newCpfCnpj, String newNome, String newSexo, String newEmail) {
-        sexo = newSexo;
-        nome = newNome;
-        email = newEmail;
-        cpfCnpj = newCpfCnpj;
+    String nome, email, telefone, cpf;
 
-        if (cpfCnpj.length() > 14 ) {
-            tipo = "Pessoa Jurídica";
-            tipoDoc = "CNPJ";
-        } else {
-            tipo = "Pessoa Física";
-            tipoDoc = "CPF";
-        }
-    }
-    // Método para imprimir todos os dados da pessoa de uma vez só
-    public void printDadosCadastrais() {
-        System.out.println(nome + ", é " + tipo + ", " + tipoDoc + ": " + cpfCnpj + ", email: " + email + ", sexo: " + sexo);
+    // Método construtor de pessoa
+    public Pessoa (String novoNome, String novoEmail, String novoTelefone, String novoCpf) {
+        nome = novoNome;
+        email = novoEmail;
+        telefone = novoTelefone;
+        cpf = novoCpf;
     }
 }
